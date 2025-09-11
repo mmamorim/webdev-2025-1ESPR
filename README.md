@@ -13,3 +13,5 @@
     * [Intro Javascript](/docs/intro-js.md)
 * [Aula 02](./Aula02_03SET/) (03/09) - Conhecendo Javascript
     * Jogo dos palitinhos
+* [Aula 03](./Aula03_10SET/) (10/09) - Javascript - Intro
+    * Revanche do Jogo dos palitinhos
