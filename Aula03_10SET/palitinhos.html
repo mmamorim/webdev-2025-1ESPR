@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,16 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Jogo dos Palitinhos</h1>
 
-    Nome: 
-    <input type="text" />
-    <button>Alterar nome</button>
+    Nome:
+    <input type="text" id="caixaNome"/>
+    <button onclick="alterarNome()">
+        Alterar nome
+    </button>
+
     <table>
         <tr>
             <td class="box">
@@ -40,15 +45,26 @@
     </table>
 
     <script>
-        
-        let nome = prompt("Digite seu nome:")   
-        console.log("nome", nome)
-        
-        let elem = document.getElementById("nomeJogador")
-        console.log("elem", elem);
 
-        elem.innerText = nome
-        
+        //let nome = prompt("Digite seu nome:")   
+        //console.log("nome", nome)
+
+
+        function imprimeBobeira() {
+            console.log("========");
+            console.log("BOBEIRA ");
+            console.log("========");
+        }
+
+        function alterarNome() {
+            console.log("passei aqui...");
+            let elemInput = document.getElementById("caixaNome")
+            let nome = elemInput.value
+            let elem = document.getElementById("nomeJogador")
+            elem.innerText = nome
+        }
+
     </script>
 </body>
+
 </html>
