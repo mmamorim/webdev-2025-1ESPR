@@ -15,3 +15,5 @@
     * Jogo dos palitinhos
 * [Aula 03](./Aula03_10SET/) (10/09) - Javascript - Intro
     * Revanche do Jogo dos palitinhos
+* [Aula 04](./Aula04_17SET/) (17/09) - Javascript - Desvios Condicionais
+    * O Retorno do Jogo dos palitinhos
