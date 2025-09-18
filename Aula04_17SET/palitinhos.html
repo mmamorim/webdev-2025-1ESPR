@@ -43,14 +43,34 @@
 
     <script>
 
-        let nome
+        let nome = "Alguém da SIlva"
         let qtdeComp = 3
         let qtdeJog = 3
 
 
         function clicouBotaoJogar() {
-            console.log("Estou aqui....")
-            
+            console.log("Estou aqui....", nome)
+            let qtdeSelecJog = parseInt(prompt("Digite qtde esconder"))
+            let qtdePalpiteJog = parseInt(prompt("Digite seu palpite"))
+            console.log("qtdeSelecJog", qtdeSelecJog);
+            console.log("qtdePalpiteJog", qtdePalpiteJog);
+
+            let qtdeSelecComp = parseInt(Math.random() * 10) % (qtdeComp + 1)
+            let qtdePalpiteComp = qtdeSelecComp + parseInt(Math.random() * 10) % (qtdeJog + 1)
+            console.log("qtdeSelecComp", qtdeSelecComp);
+            console.log("qtdePalpiteComp", qtdePalpiteComp);
+
+            let total = qtdeSelecComp + qtdeSelecJog
+            if (qtdePalpiteJog == total) {
+                console.log(nome + " GANHOU!!!!");
+            } else {
+                if (qtdePalpiteComp == total) {
+                    console.log("COMPUTADOR GANHOU!!!!");
+                } else {
+                    console.log("NINGUÉM GANHOU!!!!");
+                }
+            }
+
         }
 
         function alterarNome() {
