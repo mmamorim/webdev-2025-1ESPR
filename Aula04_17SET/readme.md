@@ -52,6 +52,18 @@ if (nota >= 9) {
 } else {
   console.log("Reprovado.");
 }
+
+if (nota >= 9) {
+  console.log("Excelente!");
+} else {
+  if (nota >= 6) {
+    console.log("Aprovado.");
+  } else {
+    console.log("Reprovado.");
+  }  
+}
+  
+
 ~~~
 
 ## Operador ternário `(? :)`
@@ -69,6 +81,20 @@ Exemplo:
 let idade = 20;
 let mensagem = idade >= 18 ? "Maior de idade" : "Menor de idade";
 console.log(mensagem);
+
+if(idade >= 18) {
+  mensagem = "Maior de idade"
+} else {
+  mensagem = "Menor de idade"
+}
+if(idade >= 18) {
+  mensagem = "Maior de idade"
+} 
+if(!idade>=18) {
+  mensagem = "Menor de idade"
+}
+
+
 ~~~
 
 ## Estrutura switch
