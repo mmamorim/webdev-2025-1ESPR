@@ -13,8 +13,28 @@
 
     <script>
 
-        
+        function geraNomeFake() {
+            let nomes = ["Ana", "Bia", "José", "João", "Carlos", "Bernardo", "Lucas", "Maria"]
+            let sobrenomes = ["Alface", "Cebola", "Agrião", "Tomate", "Escarola"]
+            //for(let i=0; i < nomes.length; i++) {
+            //    console.log("Bom dia",nomes[i]);
+            //}
 
+            //for(let i in nomes) {
+            //    console.log("Bom dia",nomes[i]);            
+            //}
+
+            let pos = Math.floor(Math.random() * nomes.length)
+            let nome = nomes[pos]
+            pos = Math.floor(Math.random() * sobrenomes.length)
+            let sobrenome = nomes[pos]
+
+            return nome + " " + sobrenome
+        }
+
+        let nome = geraNomeFake()
+        console.log("Bom dia",nome);
+        
     </script>
 </body>
 
