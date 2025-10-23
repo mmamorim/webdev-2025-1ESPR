@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08</title>
+</head>
+
+<body>
+
+    <h1>Aula 09</h1>
+
+    <script>
+
+        function caixa(texto, char) {
+            let linha = "+"+char
+            for(let i=0; i < texto.length; i++) {
+                linha = linha + char
+            }
+            linha = linha + char + "+"
+            console.log(linha);
+            console.log("| "+texto+" |");
+            console.log(linha);
+            
+        }
+
+        function frutaEmoji(nomeDaFruta) {
+            if(nomeDaFruta == "morango") {
+                return "🍓"
+            }
+            if(nomeDaFruta == "limão") {
+                return "🍋‍🟩"
+            }
+            if(nomeDaFruta == "maçã") {
+                return "🍎"
+            }
+        }
+
+        caixa("Ana", "*")
+        caixa("oi gente", "-")
+
+        //let emoji = frutaEmoji("limão")
+        //console.log(emoji);
+        console.log(frutaEmoji("maçã"));
+        console.log(frutaEmoji("morango"));
+        console.log(frutaEmoji("limão"));
+        
+    </script>
+</body>
+
+</html>
