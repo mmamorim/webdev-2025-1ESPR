@@ -56,3 +56,39 @@ let cifrado2 = cifrarAtbash2("ALFACE alface")
 console.log("cifrado2", cifrado2);
 let decifrado2 = cifrarAtbash2(cifrado2)
 console.log("decifrado", decifrado2);
+
+
+function gerarChavesRSA_Didaticas(p, q) {
+    if (p <= 1 || q <= 1) return null; 
+    
+    const N = p * q;
+    const phi_N = (p - 1) * (q - 1);
+    
+    let E = 3;
+    while (E < phi_N) {
+        // Encontrar o primeiro E que é coprimo de phi_N
+        if ((phi_N % E !== 0) && ((p - 1) % E !== 0) && ((q - 1) % E !== 0)) {
+             // Otimização: A verificação (p-1)%E e (q-1)%E não é rigorosamente a do RSA, 
+             // mas é didática e evita fatores óbvios para primos pequenos.
+            break;
+        }
+        E++;
+    }
+
+    let D = 1;
+    while (D < phi_N) {
+        // Encontrar D tal que (D * E) % phi_N === 1
+        if ((D * E) % phi_N === 1) {
+            break;
+        }
+        D++;
+    }
+    
+    return {
+        publica: { E, N }, // Use E e N para CIFRAR
+        privada: { D, N }  // Use D e N para DECIFRAR
+    };
+}
+
+let chaves = gerarChavesRSA_Didaticas(13,17) 
+console.log(chaves);
